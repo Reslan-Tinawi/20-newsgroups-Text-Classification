@@ -68,10 +68,12 @@ class NLTKVectorizer(TfidfVectorizer):
         '''
         remove stopwords from the document tokens
         '''
-
-        tokens = [token for token in tokens if token not in self.stop_words]
-
-        return tokens
+        
+        if self.stop_words is not None:
+            tokens = [token for token in document_tokens if token not in self.stop_words]
+            return tokens
+        else:
+            return document_tokens
 
     def remove_short_tokens(self, document_tokens):
         '''
@@ -93,13 +95,13 @@ class NLTKVectorizer(TfidfVectorizer):
         document_tokens = self.tokenize_document(document)
 
         # remove tokens which are not alpha numeric
-        document_tokens = self.remove_non_alphanumeric_tokens(document)
+        document_tokens = self.remove_non_alphanumeric_tokens(document_tokens)
 
         # remove only numeric tokens
-        document_tokens = self.remove_numeric_tokens(document)
+        document_tokens = self.remove_numeric_tokens(document_tokens)
 
         # lemmatize tokens
-        document_tokens = self.lemmatize_document(document)
+        document_tokens = self.lemmatize_document(document_tokens)
 
         # convert tokens to lower case
         document_tokens = self.convert_to_lowercase(document_tokens)
@@ -113,4 +115,4 @@ class NLTKVectorizer(TfidfVectorizer):
         return document_tokens
 
     def build_analyzer(self):
-        return partial(self.analyze_document(document))
+        return lambda document: self.analyze_document(document)
