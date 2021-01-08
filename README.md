@@ -4,6 +4,4 @@ This notebook contains implementation of *Text Classification* using the [20 New
 
 The accompanying blog post for this notebook: [Text Classification with Python (and some AI Explainability!)](https://reslan-tinawi.github.io/2020/05/26/text-classification-using-sklearn-and-nltk.html)
 
-- Link to notebook on [Nbviewer](https://nbviewer.jupyter.org/github/Reslan-Tinawi/20-newsgroups-Text-Classification/blob/master/Text%20Classification.ipynb)
-
-- Link to notebook on [Binder](https://mybinder.org/v2/gh/Reslan-Tinawi/20-newsgroups-Text-Classification/439f91a8a0079f497b5cab12d13257b9151b984a)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Reslan-Tinawi/20-newsgroups-Text-Classification/439f91a8a0079f497b5cab12d13257b9151b984a)
