@@ -1,4 +1,4 @@
-# 20-newsgroups-Text-Classification
+# 20 newsgroups Text Classification
 
 This notebook contains implementation of *Text Classification* using the [20 Newsgroups](http://qwone.com/~jason/20Newsgroups/) dataset, using [scikit-learn](https://scikit-learn.org/stable/) and [NLTK](https://www.nltk.org/) libraries, and *some* model explanations with [LIME](https://github.com/marcotcr/lime) library.
 
